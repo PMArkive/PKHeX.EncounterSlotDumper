@@ -51,6 +51,7 @@ public sealed record EncounterArea1
         var areas = new List<EncounterArea1>(count);
         for (int i = 0; i < count; i++)
         {
+            // u16[] WildDataPointers
             int ptr = ReadUInt16LittleEndian(data[(i * 2)..]);
 
             var gRate = data[ptr++];
